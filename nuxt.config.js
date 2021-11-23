@@ -48,7 +48,9 @@ export default {
       lang: "ja",
     },
   },
-
+  router: {
+    base: "/killtime/",
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 };
