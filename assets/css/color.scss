@@ -1,0 +1,16 @@
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": #1900ff,
+    "secondary": #6c757d,
+    "success": #a7289c,
+    "info": #17a2b8,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #e9ecef,
+    "dark": #343a40,
+  ),
+  $theme-colors
+);
+
+@import "~bootstrap/scss/bootstrap";
