@@ -76,12 +76,12 @@ export default {
     return {
       links: [
         {
-          title: "Home",
-          to: { name: "index" },
+          title: "使い方",
+          to: { name: "99usage" },
         },
         {
-          title: "教師：メニュー",
-          to: { name: "t-menu" },
+          title: "Home",
+          to: { name: "index" },
         },
       ],
     };
