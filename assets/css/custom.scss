@@ -1,0 +1,30 @@
+// テーマカラー設定
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary": #1900ff,
+    "secondary": #6c757d,
+    "success": #a7289c,
+    "info": #17a2b8,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #f5f5f5,
+    "dark": #343a40,
+    "softblue": #c5e1e8,
+    "softgreen": #daf2df,
+    "softyellow": #fff3c9,
+    "softred": #ffc7c9,
+    "pos": #daf2df,
+    "neg": #ffc7c9,
+  ),
+  $theme-colors
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+// メディアクエリ指定
+@include media-breakpoint-up(md) {
+  .w-md {
+    position: fixed;
+  }
+}
