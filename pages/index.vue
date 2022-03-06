@@ -13,12 +13,13 @@
             class="mb-2"
           ></b-form-input>
           <section class="grid">
-            <div
+            <nuxt-link
+              to="chapter"
               v-for="b in search_books"
               :key="b.book_id"
               class="bg-white border-2 p-1"
             >
-              <span v-for="tag in b.tag" :key="tag">
+              <span v-for="(tag, index) in b.tag" :key="index">
                 <b-badge variant="secondary" class="mr-1">{{
                   tag
                 }}</b-badge></span
@@ -26,7 +27,7 @@
               <div class="h4">{{ b.book_name }}</div>
 
               <div>{{ b.caption }}</div>
-            </div>
+            </nuxt-link>
           </section>
         </b-col>
         <!-- sub -->
@@ -43,7 +44,11 @@
           <section class="bg-green-100 mt-3 p-2 rounded-2xl">
             <div class="text-2xl">ちょっとした情報</div>
             <ul>
-              <li v-for="i in info" :key="i" class="bg-white p-1 mb-1">
+              <li
+                v-for="(i, index) in info"
+                :key="index"
+                class="bg-white p-1 mb-1"
+              >
                 <nuxt-link to="info">
                   <div class="text-indigo-700">{{ i.title }}</div>
                   <div class="text-gray-400 text-md-right">{{ i.date }}</div>
