@@ -15,30 +15,7 @@ export default Vue.extend({
   data() {
     return {
       db: db,
-      book: db.book,
-      search: "",
     };
-  },
-  mounted() {},
-  methods: {},
-  computed: {
-    search_books() {
-      return this.book.filter((book) => {
-        return (
-          book.book_name.includes(this.search) ||
-          book.caption.includes(this.search) ||
-          book.tag.includes(this.search)
-        );
-      });
-    },
   },
 });
 </script>
-
-<style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 0.5rem;
-}
-</style>
