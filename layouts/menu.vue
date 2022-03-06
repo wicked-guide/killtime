@@ -6,7 +6,7 @@
     />
     <!-- ヘッダー -->
     <b-navbar toggleable="md" type="dark" variant="info" class="sticky-top">
-      <b-navbar-brand href="/">Wicked Wonder World</b-navbar-brand>
+      <b-navbar-brand to="/">E-OS</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -40,9 +40,27 @@
       </b-collapse>
     </b-navbar>
 
-    <!-- メイン -->
-    <b-container fluid class="p-0">
-      <nuxt />
+    <b-container fluid class="bv-example-row">
+      <b-row>
+        <!-- サイドメニュー -->
+        <b-col cols="12" md="2" class="w-md h-100 overflow-y-auto pt-3 bg-pos">
+          <ul class="menu-list">
+            <li v-for="(item, index) in links" :key="index">
+              <NuxtLink :to="item.to" class="text-lg nowrap">
+                {{ item.title }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </b-col>
+        <!-- コンテンツ -->
+        <b-col
+          cols="12"
+          md="10"
+          class="w-md h-100 right-0 overflow-y-auto bg-light pt-3"
+        >
+          <nuxt
+        /></b-col>
+      </b-row>
     </b-container>
   </section>
 </template>
@@ -55,7 +73,18 @@ Vue.use(BootstrapVueIcons);
 
 export default {
   data() {
-    return {};
+    return {
+      links: [
+        {
+          title: "使い方",
+          to: { name: "99usage" },
+        },
+        {
+          title: "Home",
+          to: { name: "index" },
+        },
+      ],
+    };
   },
 };
 </script>

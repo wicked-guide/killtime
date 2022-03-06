@@ -29,6 +29,7 @@ import Vue from "vue";
 import dbJson from "../assets/db.json";
 
 export default Vue.extend({
+  layout: "menu",
   data() {
     return {
       db: dbJson,
