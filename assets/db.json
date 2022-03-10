@@ -172,5 +172,17 @@
       "date": "2023/3/17",
       "title": "潜入レポート：旨い学食ランキング"
     }
+  ],
+
+  "card": [
+    {
+      "type": "2",
+      "qize": "2×6",
+      "answer": "12",
+      "qback": true,
+      "aback": true,
+      "qclear": false,
+      "aclear": false
+    }
   ]
 }
