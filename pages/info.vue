@@ -5,25 +5,27 @@
     </nuxt-link>
     <!--  -->
     <section class="container">
-      <h3 class="text-2xl border-b-4 mb-2">
-        あなたの知らない世界：実は儲かっている駄菓子編
-      </h3>
+      <h3 class="text-2xl border-b-4 mb-2">潜入レポート：旨い学食ランキング</h3>
       <article>
-        <div>
-          昔から、多くの人hが「どうして勉強しなくてはならないのか？」と疑問に感じてきたが、その問いに対する代表的な解答が「<b>ちゃんとした社会人になるため</b>」だろう。
-        </div>
-        <div>
-          しかし、しっかり勉強して良い成績をとれたら、果たして本当に「<b>ちゃんとした社会人</b>」になれるのだろうか？
-        </div>
-        <ul>
-          <li>・売れる商品の作り方</li>
-          <li>・効果的な宣伝方法</li>
-          <li>・決算書の読み方</li>
+        <ul v-for="i in 10" :key="i">
+          <li class="border-8 rounded-3xl p-2 mb-2">
+            <div class="text-3xl d-flex">
+              <div>
+                <b-badge variant="info">第{{ i }}位</b-badge>※※学院：〇〇定食
+              </div>
+              <div class="ml-auto">**円</div>
+            </div>
+            <div class="row">
+              <img src="~/assets/image/lunch.png" alt="" class="col-6" />
+              <div class="col-6">
+                <p class=""><b>評価ポイント</b></p>
+                <p>
+                  毎日食べても良い旨さと栄養バランス、そして価格の見事な「丁度よさ！」
+                </p>
+              </div>
+            </div>
+          </li>
         </ul>
-        <div>そういった仕事に関することを、学校では全く教えてくれない。</div>
-        <div>
-          そこで今回は、駄菓子屋を例に挙げて「学校では教えてくれないビジネス入門」として、基本的なことをレクチャーしていこう。
-        </div>
       </article>
     </section>
   </section>
