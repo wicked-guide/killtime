@@ -11,7 +11,7 @@
           <tr v-for="tr in tableData" :key="tr.chapterId">
             <!-- <th>{{ tr.chapterId }}</th> -->
             <td>
-              <nuxt-link to="page"> {{ tr.chapterName }}</nuxt-link>
+              <nuxt-link to="page3"> {{ tr.chapterName }}</nuxt-link>
             </td>
             <td class="text-right col-2">
               {{ tr.status }}<span v-show="tr.status">点</span>

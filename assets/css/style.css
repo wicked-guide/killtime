@@ -5,3 +5,7 @@
   max-height: 80vh;
   overflow-y: auto;
 }
+
+.nowrap {
+  white-space: nowrap;
+}
